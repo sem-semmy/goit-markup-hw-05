@@ -8,20 +8,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <div class="header-container">
+    <header >
+      <div class="header__container">
       <nav class="nav">
         <a class="logo" href="#"><span class="logo-akcent">Web</span>Studio</a>
         <ul class="nav-list list ">
-          <li><a class="nav-link active" href="./index.html">Студия</a></li>
-          <li><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
-          <li><a class="nav-link" href="">Контакты</a></li>
+          <li class="nav-item">
+            <a class="nav-link active current" href="./index.html">Студия</a>
+            <div class="nav-link"> 
+            </div>
+            <!-- nav-indicator active-->
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="">Контакты</a>
+          </li>
         </ul>
       </nav>
       <ul class="contact-list">
@@ -47,12 +56,12 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button type="button" class="button">Заказать услугу</button>
+        <button type="button" class="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <section class="section">
         <div class="container">
-        <h2 class="no-display">Наши преимущества:</h2>
+        <h2 class="visually-hidden">Наши преимущества:</h2>
         <ul class="benefits-list">
           <li class="benefits-item">
             <div class="benefits-background">
@@ -97,11 +106,26 @@
         <div class="container">
         <h2 class="subtitle">Чем мы занимаемся</h2>
         <ul class="description-list card-set">
-          <li>
+          <li class="image-bloc">
             <img src="./images/index/box_1.jpg" alt="computer programming" width="370" height="294" />
+            <div class="description-subtitle">
+              <div class="description-opasity"></div>
+              <h3 class="description-text">Десктопные приложения</h3>
+            </div>
           </li>
-          <li><img src="./images/index/box_2.jpg" alt="using of technology" width="370" height="294" /></li>
-          <li><img src="./images/index/box_3.jpg" alt="computer graphics" width="370" height="294" /></li>
+          <li class="image-bloc">
+            <img src="./images/index/box_2.jpg" alt="using of technology" width="370" height="294" />
+             <div class="description-subtitle">
+              <div class="description-opasity"></div>
+              <h3 class="description-text">Мобильные приложения</h3>
+            </div></li>
+          <li class="image-bloc">
+            <img src="./images/index/box_3.jpg" alt="computer graphics" width="370" height="294" />
+             <div class="description-subtitle">
+              <div class="description-opasity"></div>
+              <h3 class="description-text">Дизайнерские решения</h3>
+            </div>
+          </li>
         </ul>
         </div>
       </section>
@@ -272,7 +296,8 @@
       </section >
     </main>
 <section class="footer">
-    <footer class="container footer-all">
+  <div class="container">
+    <footer class="footer-all">
       <div >
       <a class="logo logo-white" href="#"><span class="logo-akcent">Web</span>Studio</a>
       <address>
@@ -316,6 +341,20 @@
              </ul>
       </div>
     </footer>
+     </div>
     </section>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <div class="modal-navigation">
+          <button type="button" data-modal-close class="modal-button"> 
+            <svg class="modal-button-icon" data-modal-close width="11" height="11">
+              <use href="./images/icons.svg#icon-close-black"></use>             
+            </svg>
+          </button>
+        </div>
+        <!-- <div class="button"></div> -->
+      </div>
+    </div>
+     <script src="./js/modal.js"></script>
   </body>
 </html>
