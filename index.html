@@ -297,7 +297,7 @@
     </main>
  <footer class="footer">
       <div class="container footer-all">
-        <div class="">
+        <div >
       <a class="logo logo-white" href="#"><span class="logo-akcent">Web</span>Studio</a>
       <address>
         <ul >
@@ -338,6 +338,20 @@
               </a></li>
              </ul>
       </div>
+      <!-- <div class="form-wrapper"> -->
+        <form class="form" action="submin">
+          <label for="user_email">
+             <h2 class="footer-soc-title">Підпишіться на розсилку</h2>
+            <input type="email" name="email" placeholder="E-mail" class="subscribe-email">
+          </label>
+          <button type="submit" class="subscribe-btn">
+            Підписатися
+            <svg  width="24" height="24">
+              <use href="./images/icons.svg#icon-send" class="subscribe-icon" ></use>
+            </svg>
+          </button>
+        </form>
+      <!-- </div> -->
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -349,7 +363,6 @@
             </svg>
           </button>
         </div>
-        <!-- <div class="button"></div> -->
       </div>
     </div>
      <script src="./js/modal.js"></script>
