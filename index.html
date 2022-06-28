@@ -109,20 +109,17 @@
           <li class="image-bloc">
             <img src="./images/index/box_1.jpg" alt="computer programming" width="370" height="294" />
             <div class="description-subtitle">
-              <div class="description-opasity"></div>
               <h3 class="description-text">Десктопные приложения</h3>
             </div>
           </li>
           <li class="image-bloc">
             <img src="./images/index/box_2.jpg" alt="using of technology" width="370" height="294" />
              <div class="description-subtitle">
-              <div class="description-opasity"></div>
               <h3 class="description-text">Мобильные приложения</h3>
             </div></li>
           <li class="image-bloc">
             <img src="./images/index/box_3.jpg" alt="computer graphics" width="370" height="294" />
              <div class="description-subtitle">
-              <div class="description-opasity"></div>
               <h3 class="description-text">Дизайнерские решения</h3>
             </div>
           </li>
@@ -346,8 +343,8 @@
           </label>
           <button type="submit" class="subscribe-btn">
             Підписатися
-            <svg  width="24" height="24">
-              <use href="./images/icons.svg#icon-send" class="subscribe-icon" ></use>
+            <svg class="subscribe-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send" ></use>
             </svg>
           </button>
         </form>
@@ -355,14 +352,92 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
+      <!-- is-hidden -->
       <div class="modal">
-        <div class="modal-navigation">
-          <button type="button" data-modal-close class="modal-button"> 
+              <button type="button" data-modal-close class="modal-button"> 
             <svg class="modal-button-icon" data-modal-close width="11" height="11">
               <use href="./images/icons.svg#icon-close-black"></use>             
             </svg>
           </button>
-        </div>
+        <!-- <div class="modal-navigation"> -->
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+            <form class="modal-form">
+                <div class="modal-field">
+              <label class="modal-label">
+                Имя </label>
+                   <div class="input-wrap">
+              <input type="text"
+              class="modal-input"
+              name="user-name"
+              />
+               <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+              </div>
+              </div>
+
+              <div class="modal-field">
+                <label for="user-tel" class="modal-label">Телефон</label>
+                <div class="input-wrap">
+              <input type="text"
+              class="modal-input"
+               name="user-tel"
+              minlength="10"
+              />
+ <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              </div>
+              </div>
+             <div class="modal-field">
+                <label for="user-mail" class="modal-label">Почта</label>
+                <div class="input-wrap">
+              <input type="text"
+              class="modal-input"
+              name="user-mail"
+              />
+ <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              </div>
+              </div>
+              <!-- //// -->
+              
+                         <div class="modal-field">
+                <label for="#" class="modal-label">Комментарий</label>
+ <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-comment"
+              placeholder="Введіть текст"
+            ></textarea>
+              </div>
+              <div class="modal-field">
+            <input
+              type="checkbox"
+              name="privacy"
+              class="modal-check visually-hidden"
+              value="true"
+              id="user-check"
+            />
+               <label for="user-check" class="check-text">
+              <span>
+                <svg class="check-icon" width="16" height="15">
+                  <use href="./images/icons.svg#icon-square"></use>
+                </svg>
+              </span>
+              Політика користування <a href="#">gfhghgdfs</a></label
+            >
+          </div>
+
+ <button type="submit">Отправить</button>
+
+            </form>
+      
+
+    
+        <!-- </div> -->
       </div>
     </div>
      <script src="./js/modal.js"></script>
